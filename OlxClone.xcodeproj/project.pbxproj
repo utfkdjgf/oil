@@ -11,6 +11,8 @@
 		B01F22642A01637E00B4A9BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01F22632A01637E00B4A9BA /* ContentView.swift */; };
 		B01F22662A01638000B4A9BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01F22652A01638000B4A9BA /* Assets.xcassets */; };
 		B01F22692A01638000B4A9BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01F22682A01638000B4A9BA /* Preview Assets.xcassets */; };
+		B01F22772A0167B300B4A9BA /* RegisterManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01F22762A0167B300B4A9BA /* RegisterManagerView.swift */; };
+		B01F22792A016B6C00B4A9BA /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = B01F22782A016B6C00B4A9BA /* Montserrat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		B01F22632A01637E00B4A9BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B01F22652A01638000B4A9BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01F22682A01638000B4A9BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B01F22762A0167B300B4A9BA /* RegisterManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManagerView.swift; sourceTree = "<group>"; };
+		B01F22782A016B6C00B4A9BA /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
+		B01F227A2A016B9A00B4A9BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,9 @@
 		B01F22602A01637E00B4A9BA /* OlxClone */ = {
 			isa = PBXGroup;
 			children = (
+				B01F227A2A016B9A00B4A9BA /* Info.plist */,
+				B01F22782A016B6C00B4A9BA /* Montserrat */,
+				B01F226F2A01675100B4A9BA /* Views */,
 				B01F22612A01637E00B4A9BA /* OlxCloneApp.swift */,
 				B01F22632A01637E00B4A9BA /* ContentView.swift */,
 				B01F22652A01638000B4A9BA /* Assets.xcassets */,
@@ -65,6 +73,54 @@
 				B01F22682A01638000B4A9BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B01F226F2A01675100B4A9BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B01F22722A01677900B4A9BA /* SignUp */,
+				B01F22702A01675700B4A9BA /* RegisterManager */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B01F22702A01675700B4A9BA /* RegisterManager */ = {
+			isa = PBXGroup;
+			children = (
+				B01F22752A0167A100B4A9BA /* View */,
+			);
+			path = RegisterManager;
+			sourceTree = "<group>";
+		};
+		B01F22722A01677900B4A9BA /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B01F22742A01679000B4A9BA /* ViewModel */,
+				B01F22732A01677F00B4A9BA /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		B01F22732A01677F00B4A9BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B01F22742A01679000B4A9BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B01F22752A0167A100B4A9BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B01F22762A0167B300B4A9BA /* RegisterManagerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +183,7 @@
 			files = (
 				B01F22692A01638000B4A9BA /* Preview Assets.xcassets in Resources */,
 				B01F22662A01638000B4A9BA /* Assets.xcassets in Resources */,
+				B01F22792A016B6C00B4A9BA /* Montserrat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +196,7 @@
 			files = (
 				B01F22642A01637E00B4A9BA /* ContentView.swift in Sources */,
 				B01F22622A01637E00B4A9BA /* OlxCloneApp.swift in Sources */,
+				B01F22772A0167B300B4A9BA /* RegisterManagerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,17 +322,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OlxClone/Preview Content\"";
 				DEVELOPMENT_TEAM = 837GYJYS57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OlxClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,6 +342,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uran.OlxClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,17 +354,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OlxClone/Preview Content\"";
 				DEVELOPMENT_TEAM = 837GYJYS57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OlxClone/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +374,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uran.OlxClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
